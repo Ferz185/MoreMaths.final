@@ -4,6 +4,7 @@ header {
 
 body {
   background-color: rgb(233, 208, 175);
+  overflow-x: hidden;
 }
 
 .header {
