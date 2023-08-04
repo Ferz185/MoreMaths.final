@@ -1,13 +1,64 @@
-
+// Paleta de colores con gradientes
+$color-primary: #8A2BE2
+$color-secondary: #7c243756 
+$color-accent: #f3887a 
+$color-hover: #a1061be7 
+$color-cites: #a322229f 
+$color-text: black
+//Fuentes de texto
+$font-primary: Arial  
+$font-secondary: sans-serif
+// Estilos para el encabezado y la barra de navegación
 header
-    background-color: blueviolet
+  background: linear-gradient(to right, $color-primary, $color-secondary)
+  padding: 10px 0
+
+  .navbar
+    .navbar-brand
+      font-size: 1.5rem
+      color: white
+      text-decoration: none
+      &:hover
+        color: $color-hover 
+
+    .nav-item
+      margin-right: 20px 
+
+    .nav-link
+      color: white
+      text-decoration: none
+      &:hover
+        color: $color-hover 
+
+    .dropdown
+      .dropdown-menu
+        background: linear-gradient(to right, $color-primary, $color-accent)
+        .dropdown-item
+          color: white
+          &:hover
+            background: linear-gradient(to right, $color-primary, $color-hover) 
+
+// Estilos para el formulario de búsqueda
+form[role="search"]
+  .form-control
+    width: 200px
+    border-radius: 30px
+    &:focus
+      box-shadow: 0 0 5px $color-hover 
+
+// Estilos para el botón de búsqueda
+.btn-outline-success
+  color: #fff
+  border-color: #fff
+  &:hover
+    color: $color-primary
+    background: linear-gradient(to right, $color-primary, $color-hover)
+
+// Estilo del body
 body
-    background-color: rgb(233, 208, 175)
-    overflow-x: hidden
-.header
-    color: black
-    font-size: 27px
-    padding: 0px
+  background: $color-secondary
+  overflow-x: hidden
+
 // Estilo de las cartas
 .card-with-background
   position: relative
@@ -16,30 +67,111 @@ body
   background-position: center
   color: black
   padding: 20px
+
 // Estilos para el texto en el carrusel
 .carousel-caption
   position: absolute
   bottom: 0
   left: 0
   right: 0
-  padding: 20px 
-  background-color: rgba(0, 0, 0, 0.7) 
-  color: white 
-h2
-    font-size: 2rem 
-    margin-bottom: 10px 
-p
-    font-size: 1.2rem 
+  padding: 20px
+  background-color: $color-cites
+  color: white
+
+  h2 
+    font-size: 2rem
+    margin-bottom: 10px
+  p 
+    font-size: 1.5rem
+    font-style: $font-secondary
+
+// Estilos para el bloque de citas
+figure.text-center
+  margin: 20px
+  padding: 20px
+  background-color: $color-cites
+  color: black
+  border-radius: 10px
+  font-family: $font-primary, $font-secondary
+
+  figcaption.blockquote-footer
+    font-size: 1rem
+    font-weight: bold
+    color: black
+// Estilos para la sección "sobre nosotros"
+section.py-5
+  background-color: $color-secondary
+  color: $color-text
+
+  h2.text-center
+    font-size: 2.5rem
+    margin-bottom: 20px
+
+  p.lead.text-center
+    font-size: 1.5rem
+
+  .col-lg-6
+    h3
+      font-size: 1.8rem
+      color: $color-text
+      margin-top: 30px
+      margin-bottom: 15px
+
+    p
+      font-size: 1.2rem
+
+    img.img-fluid
+      border-radius: 10px
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+      margin-bottom: 20px
+
+//contacto
+
+main
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 130vh
+
+.formcontainer
+  width: 100%
+  max-width: 600px
+  margin: 40px
+  padding: 40px
+  background-color: $color-secondary
+  border-radius: 8px
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1)
+  text-align: center
+
+.form-title
+  color: $color-text
+  font-size: 30px
+  font-weight: bold
+  margin-bottom: 20px
+  font-style: $font-primary
+
+.form-group
+  margin-bottom: 20px
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea
+  width: 100%
+  padding: 10px
+  border: 1px solid #ccc
+  border-radius: 4px
+
+textarea
+  resize: vertical
+
+.formbtn 
+  background-color: $color-secondary
+  color: white
+  border: none
+  padding: 20px 100px
+  border-radius: 20px
+  cursor: pointer
+  transition: background-color 0.3s
 
 
-
-
-
-
-
-
-
-
-  
-  
-  
